@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    background-color: #548CFF;
+    font-family: 'Press Start 2P', 'VT323', 'Luckiest Guy', 'DotGothic16';
+    overflow-y:hidden;
+}
+  
+header{
+
+    color: #faf9f9;
+    display: block;
+    padding: 1.5%;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    
+}
+
+main {
+    max-width: 45rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main .caja{
+    border: outset #7E4A22;
+    padding: 1rem;
+    margin: 0 1rem 0 1rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-image: url(https://i.pinimg.com/originals/5e/3f/71/5e3f7154cd1cf3d70bb3d512a6a96425.png);
+    background-position: center;
+    background-size: contain;
+    height: auto;
+}
+
+label {
+    color: #FCD6C9;
+    text-shadow: 0.1em 0.1em black;
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+
+.caja textarea{
+    /*border-radius: 0.5rem;*/
+    border:  outset black;
+    display: block;
+    padding: 0.5rem;
+    width: 95%;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    font-family: sans-serif;
+    resize: none;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+button{
+    font-family: 'VT323';
+    font-weight: bold;
+    color: #E65B06;
+    text-shadow: 0.1em 0.1em black;
+    font-size: 20px;
+    background-color:#FBA53E;
+    border-width: medium;
+    border-style: outset;
+    border-top: #E55D13;
+    border-left: #E55D13;
+    border-right: black;
+    border-bottom: black;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+p{
+    color: #FCD6C9;
+    text-shadow: 0.1em 0.1em black;
+    font-size: 10%;
+    margin: 1.5%;
+    position: relative;
+    top: 5%
+}
+
+footer .decoracion{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .decoracion #mario{
+    height: 20%;
+    position: absolute;
+    top: -20%;
+}
+
+footer .decoracion #castillo{
+    height: 90%;
+    position: absolute;
+    right: 1%;
+    top: -90%;
+}
+
+footer{
+    background: url(https://lh3.googleusercontent.com/LYl4ePgOsdfLiDYa6QumqC71cxgQ7bTnS0IQv13JoSO5XvEqCf7qHJHwGz4d25JYTo861reDctwRpI9eQmyckA-2cu7qlncYMzE);
+    background-size: 5%; 
+    height: 40px;
+    position: relative;
+    padding:10.9%;
+    margin-top: 15%;
+}
