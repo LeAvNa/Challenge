@@ -9,7 +9,7 @@
 
 body{
     background-color: #548CFF;
-    font-family: 'Press Start 2P', 'VT323', 'Luckiest Guy', 'DotGothic16';
+    font-family: 'Press Start 2P', 'VT323', 'DotGothic16';
     overflow-y:hidden;
 }
   
@@ -75,8 +75,6 @@ label {
     display: flex;
     justify-content: space-between;
 }
-
-
 
 button{
     font-family: 'VT323';
