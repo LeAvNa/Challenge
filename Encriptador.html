@@ -3,12 +3,12 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" type="text/javascript" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" type= "text/css">
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" type= "text/css">
-        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" type= "text/css">
         <title>Encriptador de Texto</title>
     </head>
 
@@ -20,20 +20,21 @@
         </header>
 
         <main>
-            <div class="caja">
+            <div class="caja_main">
                 <label for="textarea-AreaEscribir">Solo letras minúsculas y sin acentos.</label>
-                <textarea class="textarea-AreaEscribir" id="textarea-AreaEscribir" name="textarea-AreaEscribir" type="text" placeholder="Ingresa texto aqui"></textarea>
-                <div class="botones">
+                <textarea class="textarea-AreaEscribir" id="textarea-AreaEscribir" name="textarea-AreaEscribir" type="text" spellcheck="false" placeholder="Ingresa texto aqui"></textarea>
+                <textarea id="textarea-AreaResultado" class="textarea-AreaResultado" name="textarea-AreaResultado" type="text" readonly></textarea>
+                <div class="caja_botones">
                     <button id="btn-encriptador" class="btn-encriptador" name="btn-encriptador" type="submit" >Encriptar</button>
                     <button id="btn-desencriptador" class="btn-desencriptador" name="btn-desencriptador" type="submit" >Desencriptar</button>
-                </div><br>
-                <textarea id="textarea-AreaResultado" class="textarea-AreaResultado" name="textarea-AreaResultado" type="text"  placeholder="Texto encriptado"></textarea>
+                </div>
                 <button id="btn-copiar" class="btn-copiar" name="btn-copiar">Copiar texto</button>
                 <p id="creditos">¡Hecho por Leonardo Avila Navarro!</p>
             </div>
-            <script src="script.js"></script>
+
         </main>
 
+        
         <footer>
             <div class="decoracion">
                 <img id="mario" src="https://static.wikia.nocookie.net/2733a2aa-86b7-41a6-96c9-dcfd7c08866c/scale-to-width/755">
