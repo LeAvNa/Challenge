@@ -3,18 +3,16 @@
     padding: 0;
   }
   
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+
 
 body{
     background-color: #548CFF;
     font-family: 'Press Start 2P', 'VT323', 'DotGothic16';
     overflow-y:hidden;
+    overflow-x:hidden;
 }
   
 header{
-
     color: #faf9f9;
     display: block;
     padding: 1.5%;
@@ -24,9 +22,8 @@ header{
     font-size: 1.4rem;
     letter-spacing: 1px;
     font-weight: bold;
-    
 }
-
+    
 main {
     max-width: 45rem;
     margin: auto;
@@ -36,10 +33,10 @@ main {
     gap: 2rem;
 }
 
-main .caja{
+main .caja_main{
     border: outset #7E4A22;
     padding: 1rem;
-    margin: 0 1rem 0 1rem;
+    margin: 0 1% 0 1%;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     background-image: url(https://i.pinimg.com/originals/5e/3f/71/5e3f7154cd1cf3d70bb3d512a6a96425.png);
     background-position: center;
@@ -49,7 +46,7 @@ main .caja{
 
 label {
     color: #FCD6C9;
-    text-shadow: 0.1em 0.1em black;
+    text-shadow: 0.1em 0.1em rgb(10, 7, 7);
     display: block;
     padding: 1rem;
     text-align: center;
@@ -59,19 +56,33 @@ label {
     font-weight: bold;
   }
 
-.caja textarea{
-    /*border-radius: 0.5rem;*/
+textarea{
     border:  outset black;
     display: block;
     padding: 0.5rem;
     width: 95%;
-    margin-top: 1rem;
-    margin-bottom: .5rem;
-    font-family: sans-serif;
     resize: none;
+    outline: none;
 }
 
-.botones{
+.caja_main #textarea-AreaEscribir{
+    border-bottom: none;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-family: sans-serif;
+    
+}
+
+.caja_main #textarea-AreaResultado{
+
+    border-top: none;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-family: sans-serif;
+   
+}
+
+.caja_botones{
     display: flex;
     justify-content: space-between;
 }
@@ -110,23 +121,24 @@ footer .decoracion{
 }
 
 footer .decoracion #mario{
-    height: 20%;
+    height: 4%;
     position: absolute;
-    top: -20%;
+    top: -4%;
 }
 
 footer .decoracion #castillo{
-    height: 90%;
+    height: 18%;
     position: absolute;
-    right: 1%;
-    top: -90%;
+    right: 18%;
+    top: -18%;
 }
 
 footer{
     background: url(https://lh3.googleusercontent.com/LYl4ePgOsdfLiDYa6QumqC71cxgQ7bTnS0IQv13JoSO5XvEqCf7qHJHwGz4d25JYTo861reDctwRpI9eQmyckA-2cu7qlncYMzE);
-    background-size: 5%; 
-    height: 40px;
-    position: relative;
+    background-size: 4%; 
+    width: 100%;
+    height: 100%;
+    position: absolute;
     padding:10.9%;
     margin-top: 15%;
 }
