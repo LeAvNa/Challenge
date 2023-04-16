@@ -1,4 +1,5 @@
 const letras ='^[a-z !ñ]+$';
+const inputTexto = document.getElementById("textarea-AreaEscribir");
 const inputResultado = document.getElementById('textarea-AreaResultado');
 const $content = document.getElementById('textarea-AreaResultado');
 
@@ -6,6 +7,7 @@ const $content = document.getElementById('textarea-AreaResultado');
 function encriptar(){
                     
     var texto = document.querySelector("#textarea-AreaEscribir").value;
+    document.querySelector(".textarea-AreaResultado").value = "";
 
     if(texto.match(letras)!=null){
         let palabras = texto.split(" ");
@@ -22,8 +24,7 @@ function encriptar(){
         }
 
         var textoEncriptado = reemplazoPalabras.join(" ");
-        document.querySelector(".textarea-AreaResultado").value = textoEncriptado;
-        //document.querySelector("#textarea-AreaEscribir").value = "";
+        animarTexto(textoEncriptado, reemplazoPalabras.length);
 
     }else{
         mensajeError("SOLO ESCRIBIR LETRAS MINÚSCULAS, SIN ACENTOS")
@@ -34,6 +35,7 @@ function encriptar(){
 function desencriptar(){
                     
     var texto = document.querySelector("#textarea-AreaEscribir").value;
+    document.querySelector(".textarea-AreaResultado").value = "";
 
     if(texto.match(letras)!=null){
         let palabras = texto.split(" ");
@@ -50,13 +52,28 @@ function desencriptar(){
         }
 
         var textoDesencriptado = reemplazoPalabras.join(" ");
-        document.querySelector(".textarea-AreaResultado").value = textoDesencriptado;
+        animarTexto(textoDesencriptado, reemplazoPalabras.length);
+        //document.querySelector(".textarea-AreaResultado").value = textoDesencriptado;
         //document.querySelector("#textarea-AreaEscribir").value = "";
 
     }else{
         mensajeError("SOLO ESCRIBIR LETRAS MINÚSCULAS, SIN ACENTOS")
     }
 
+}
+
+function animarTexto(mensaje, repeticiones){
+
+    var cambiosDeLetra = 0;
+    const intervalo = setInterval(() => {
+        document.querySelector(".textarea-AreaResultado").value += letras[Math.floor(Math.random() * letras.length)];
+        cambiosDeLetra++;
+        if(cambiosDeLetra === 100) {
+            document.querySelector(".textarea-AreaResultado").value = mensaje;
+            clearInterval(intervalo);
+            resolve();
+        }
+    }, repeticiones);
 }
 
 function copiarTexto(){
@@ -73,7 +90,7 @@ function mensajeError(mensaje){
 var boton_encriptar = document.querySelector("#btn-encriptador"); 
 boton_encriptar.onclick = encriptar;
 
-var boton_desencriptar = document.querySelector("#btn-desencriptador"); 
+var boton_desencriptar = document.querySelector("#btn-desencriptador");
 boton_desencriptar.onclick = desencriptar;
 
 var boton_copiar = document.querySelector("#btn-copiar"); 
